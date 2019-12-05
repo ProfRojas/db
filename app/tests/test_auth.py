@@ -8,11 +8,6 @@ def test_get_login_page(client):
     assert b'Email' in response.data
     assert b'Password' in response.data
 
-def test_create_user(client):
-    new_user = User(username='jase', email='carlos@carlos.com')
-    assert new_user.email == 'carlos@carlos.com'
-    assert new_user.username =='jase'
-
 
 def test_add_user_to_db(db):
     user1 = User(username='john', email='test@test.com', password='test')
